@@ -55,7 +55,6 @@ public class Custcontroller {
 //Delete
 	@DeleteMapping("/customers/{cid}")
 	public String deleteCustomer(@PathVariable int cid) {
-		@SuppressWarnings("deprecation")
 		Customer c = repo.getOne(cid);
 		repo.delete(c);
 		return "Deleted";	
